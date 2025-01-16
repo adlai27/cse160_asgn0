@@ -1,0 +1,74 @@
+<!--
+Alan Lai
+adlai@ucsc.edu
+
+Notes to Grader:
+More notes in the README.md
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>ASG0: Vector Operations</title>
+</head>
+
+<body onload="main()">
+   <canvas id="asg0" width="400" height="400" style="border:1px solid #000000;">
+      Please use a browser that supports "canvas"
+   </canvas>
+   <br />
+
+   <!-- Vector 1 -->
+   <label for="v1">v1: x</label>
+   <input type="text" id="xcoord" placeholder="x">
+   <label>y</label>
+   <input type="text" id="ycoord" placeholder="y">
+   <label>z</label>
+   <input type="text" id="zcoord" placeholder="z">
+   <br /><br />
+
+   <!-- Vector 2 -->
+   <label for="v2">v2: x</label>
+   <input type="text" id="xcoord2" placeholder="x">
+   <label>y</label>
+   <input type="text" id="ycoord2" placeholder="y">
+   <label>z</label>
+   <input type="text" id="zcoord2" placeholder="z">
+   <br /><br />
+
+   <!-- Draw Button -->
+   <button onclick="handleDrawEvent()">Draw</button>
+   <br /><br />
+
+   <!-- Selector button -->
+   <label for="opt">Operation: </label>
+   <select id="opt">
+     <option value="Add">Add</option>
+     <option value="Subtract">Subtract</option>
+     <option value="Multiply">Multiply</option>
+     <option value="Divide">Divide</option>
+     <option value="Mag">Magnitude</option>
+     <option value="Norm">Normalize</option>
+     <option value="Ang">Angle between</option>
+     <option value="Area">Area</option>
+   </select>
+
+   <!-- Input for scalar-->
+   <label for="scalar">Scalar: </label>
+   <input type="text" id="scalar" placeholder="Enter scalar">
+   <br /><br />
+
+   <button onclick="handleDrawOperationEvent()">Draw</button>
+
+   <!-- Libraries -->
+   <script src="lib/webgl-utils.js"></script>
+   <script src="lib/webgl-debug.js"></script>
+   <script src="lib/cuon-utils.js"></script>
+   <script src="lib/cuon-matrix-cse160.js"></script>
+
+
+   <script type="text/javascript" src="asg0.js"></script>
+</body>
+</html>
